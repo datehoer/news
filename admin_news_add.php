@@ -1,8 +1,3 @@
-<!-- <?php
-    #if(strpos($_SERVER['HTTP_REFERER'],'login.php')===false){
-    #header('Location: notfind.php');
-    #}
-?> -->
 <!-- 添加新闻页面 -->
 <!DOCTYPE html>
 <html lang="en">
