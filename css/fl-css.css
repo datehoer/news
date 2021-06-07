@@ -1,0 +1,25 @@
+.classes-box {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+}
+.classes-box .class-box{
+    width: 500px;
+    height: 300px;
+    float: left;
+    text-align: center;
+    font-size: 34px;
+    line-height: 300px;
+    background-color: darkkhaki;
+}
+.classes-box .class-box:first-child{
+    margin-right: 100px;
+}
+.classes-box .class-box:hover{
+    background-color: darkorange;
+}
+.classes-box .class-box a{
+    width: 500px;
+    height: 300px;
+    display: block;
+}
