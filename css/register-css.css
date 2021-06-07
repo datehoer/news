@@ -1,0 +1,29 @@
+body .register {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 200px;
+    overflow: hidden;
+}
+body .register span{
+    float: left;
+}
+body .register .inputtext{
+    
+    float: right;
+}
+body .register h2{
+    text-align: center;
+}
+body .register .register-form{
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    height: 200px;
+}
+
+body .register .register-form .register-btn{
+    
+    width: 100px;
+    border-color: whitesmoke;
+}

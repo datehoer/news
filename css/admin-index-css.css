@@ -1,0 +1,27 @@
+.body{
+    width: 1200px;
+    margin: 0 auto;
+}
+.body h1{
+    text-align: center;
+    color: darkseagreen;
+    cursor: pointer;
+}
+.body .admin-box{
+    width: 200px;
+    height: 100px;
+    margin:0 auto;
+
+    line-height: 100px;
+    text-align: center;
+    margin:0 200px;
+    float: left;
+    margin-bottom: 10px;
+}
+.body .admin-box:hover{
+    background-color: cadetblue;
+}
+.body .admin-box a{
+    color: black;
+    font-size: 24px;
+}

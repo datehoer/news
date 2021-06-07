@@ -1,0 +1,22 @@
+body .login{
+    text-align: center;
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+body .login .login-form{
+    width: 300px;
+    margin: 0 auto;
+    height: 200px;
+}
+body .login .login-form #login{
+    margin-top: 10px;
+    width: 100px;
+    border-color: whitesmoke;
+}
+
+body .login .login-form .register{
+    width: 100px;
+    border-color: whitesmoke;
+}

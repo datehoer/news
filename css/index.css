@@ -1,0 +1,92 @@
+ol,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav ul{
+    overflow: hidden;
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+}
+nav ul li{
+    float: left;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: rgb(92, 154, 235);
+    cursor: pointer;
+}
+nav ul li a{
+    display: block;
+    height: 60px;
+    width: 200px;
+}
+nav ul li:hover{
+    background: chartreuse;
+}
+body,nav,div,p,ul,li,ol{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: black;
+}
+body{
+    background-color: #E6EAE4;
+}
+body .status{
+    background-color: rgba(190, 240, 240,0.50);
+    margin-bottom: 20px;
+}
+body .status .nav-status{
+    overflow: hidden;
+    height: 30px;
+    margin-left: 888px;
+}
+body .status .nav-status li{
+    float: left;
+    width: 122px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 0 10px;
+    border-left: 1px solid black;
+    cursor: pointer;
+}
+body .status .nav-status li:hover{
+    background: burlywood;
+}
+body .status .nav-status li a{
+    display: block;
+    width: 122px;
+    height: 30px;
+}
+body .status .nav-status .main-help .help{
+    margin-top: 10px;
+    position: absolute;
+    right: 254px;
+    display: none;
+    top:35px;
+    right: 262px;
+}
+body .status .nav-status .main-help .help li{
+    float: none;
+    width: 122px;
+    background-color: white;
+}
+body .status .nav-status .index-login .login{
+    margin-top: 10px;
+    position: absolute;
+    right: 254px;
+    display: none;
+    top:35px;
+    right: 16px;
+}
+body .status .nav-status .index-login .login li{
+    float: none;
+    width: 122px;
+    background-color: white;
+}

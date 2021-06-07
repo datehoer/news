@@ -1,0 +1,42 @@
+nav ul{
+    overflow: hidden;
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+}
+nav ul li{
+    float: left;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: rgb(92, 154, 235);
+    cursor: pointer;
+}
+nav ul li:hover{
+    background: chartreuse;
+}
+.body{
+    width: 1200px;
+    height: 1200px;
+    margin: 0 auto;
+}
+.body .content {
+    overflow: hidden;
+}
+.body .content .sundry{
+    width: 198px;
+    float: left;
+    border-right: 1px solid rgb(184, 171, 171);
+}
+.body .content .sundry p a{
+    text-decoration: none;
+    color: blue;
+}
+.body .content .text{
+    padding-left: 4px;
+    width: 996px;
+    float: right;
+    font-size: 24px;
+    
+}
