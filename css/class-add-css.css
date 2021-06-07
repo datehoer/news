@@ -1,0 +1,28 @@
+.add-class{
+    width:1200px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    position: relative;
+    margin-top: 20px;
+}
+.add-class .text{
+    width: 400px;
+    height: 50px;
+    border-color: white;
+    margin-right: 100px;
+    font-size: 32px;
+    line-height: 50px;
+}
+.add-class .editbtn{
+    width: 100px;
+    height: 50px;
+    border-color: white;
+    font-size: 24px;
+    line-height: 50px;
+}
+.add-class .back{
+    position: absolute;
+    left: 200px;
+    top: 20px;
+}
