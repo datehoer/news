@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../news/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-olOxEXxDwd20BlATUibkEnjPN3sVq2YWmYOnsMYutq7X8YcUdD6y/1I+f+ZOq/47" crossorigin="anonymous">
     <link rel="stylesheet" href="../news/css/admin-css.css">
+    <link rel="stylesheet" href="../news/css/admin-up-css.css">
 </head>
 <body>
     <nav>
@@ -30,16 +31,19 @@
             <li><a href="admin_index.php">后台管理</a></li>
         </ul>
     </nav>
-    <div>
+    <div class="editnews">
+    <form action="" method="Get">
         <?php 
             foreach ($result as $key=>$news) {
-                ?><a href="view.php?m=<?php echo $news['id']?>"><?php echo '标题:'.$news['title']; ?></a><br/>
-            <form action="" method="Get">
-                <a href="admin_news_update.php?update=<?php echo $news['id']?>"><input type="button" value="修改"></a>
-            </form>
+                ?><div class="edit-new"><div><a href="view.php?m=<?php echo $news['id']?>"><?php echo '标题:'.$news['title']; ?></a></div>
+            
+                <a href="admin_news_update.php?update=<?php echo $news['id']?>"><input type="button" value="修改"></a><br/>
+            
+            </div>
         <?php
              }
         ?>
+        </form>
     </div>
 </body>
 </html>
