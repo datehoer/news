@@ -37,6 +37,12 @@
             <div class="news-class">
                 <h4>新闻类别</h4>
                 <ul>
+                    <?php
+                        include("config.php");
+                        $sqls = "select * from new_class";
+                        $sths = mysqli_query($connect,$sqls);
+                        $result = mysqli_fetch_all($sths);
+                    ?>
                     <li><label><input type="checkbox" value="ssnews" name="newsClass" id="">时事新闻</label></li>
                     <li><label><input type="checkbox" value="cjnews" name="newsClass" id="">财经新闻</label></li>
                     <li><label><input type="checkbox" value="tynews" name="newsClass" id="">体育新闻</label></li>

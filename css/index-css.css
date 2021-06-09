@@ -1,3 +1,13 @@
+body nav {
+    position: relative;
+}
+body nav .search-box{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    top: 60px;
+    right: 160px;
+}
 body .thingsbox{
     margin-top: 20px;
     width: 1200px;

@@ -16,6 +16,7 @@
     <script src="../news/js/jquery-1.12.4.min.js"></script>
 </head>
 <body>
+    
     <div class="status">
         <ul class="nav-status">
             <li><a href="index.php">官方首页</a></li>
@@ -50,6 +51,11 @@
             <li><a href="">军事新闻</a></li>
             <li><a href="login.php">后台管理</a></li>
         </ul>
+        <div class='search-box'>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="请输入要搜索的新闻"><input type="submit" value="搜索">
+                </form>
+        </div>
     </nav>
     <div class="thingsbox">
         <div class="banner thingbox">
