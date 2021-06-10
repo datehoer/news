@@ -7,9 +7,10 @@ $(".index-login").hover(function() {
 // banner
 var banner_index = 0;
 var time=setInterval(move,3000);
+var banner_len = $('.banner').children().length;
 function move(){
     banner_index++;
-    if(banner_index == 2){
+    if(banner_index == banner_len){
         banner_index=0
     }
     $(".banner-img li").eq(banner_index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
@@ -30,7 +31,7 @@ $('.banner-radio img:first-child').click(function(){
 })
 $('.banner-radio img:last-child').click(function(){
     banner_index++;
-    if(banner_index == 2){
+    if(banner_index == banner_len){
         banner_index=0
     }
     $(".banner-img li").eq(banner_index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);

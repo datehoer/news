@@ -39,9 +39,9 @@
         <div class="admin-update admin-box">
             <a href="admin_news_up.php">修改新闻</a>
         </div>
-        <div class="admin-list admin-box">
+        <!-- <div class="admin-list admin-box">
             <a href="admin_news_list.php">新闻列表</a>
-        </div>
+        </div> -->
         <div class="admin-user admin-box">
             <a href="admin_admin.php">用户操作</a>
         </div>

@@ -34,19 +34,21 @@
             <div id="div1"></div>
             <textarea class="edit-box" name="content" value="">
             </textarea>
+            
             <div class="news-class">
                 <h4>新闻类别</h4>
+                
                 <ul>
-                    <?php
+                    
+                <?php
                         include("config.php");
                         $sqls = "select * from new_class";
                         $sths = mysqli_query($connect,$sqls);
-                        $result = mysqli_fetch_all($sths);
+                        $result = mysqli_fetch_all($sths,MYSQLI_ASSOC);
+                        foreach($result as $key => $class){
+                            echo '<li><label><input type="checkbox" value="'.$class["newclass"].'" name="newsClass" id="">'.$class["newclass"].'</label></li>';
+                        }
                     ?>
-                    <li><label><input type="checkbox" value="ssnews" name="newsClass" id="">时事新闻</label></li>
-                    <li><label><input type="checkbox" value="cjnews" name="newsClass" id="">财经新闻</label></li>
-                    <li><label><input type="checkbox" value="tynews" name="newsClass" id="">体育新闻</label></li>
-                    <li><label><input type="checkbox" value="jsnews" name="newsClass" id="">军事新闻</label></li>
                 </ul>
             </div>
             <input type="submit" value="发布" name="sublime-add" id="add">
@@ -63,15 +65,16 @@
             $newsClass = $_POST["newsClass"];
             $hits = $_POST["hits"];
             var_dump($title, $userName, $settime, $content, $newsClass);
-            if ($newsClass == "ssnews") {
-                $newsClass = "时事新闻";
-            } elseif ($newsClass == "cjnews") {
-                $newsClass = "财经新闻";
-            } elseif ($newsClass == "tynews") {
-                $newsClass = "体育新闻";
-            } elseif ($newsClass == "jsnews") {
-                $newsClass = "军事新闻";
-            }
+            // if ($newsClass == "ssnews") {
+            //     $newsClass = "时事新闻";
+            // } elseif ($newsClass == "cjnews") {
+            //     $newsClass = "财经新闻";
+            // } elseif ($newsClass == "tynews") {
+            //     $newsClass = "体育新闻";
+            // } 
+            // elseif ($newsClass == "jsnews") {
+            //     $newsClass = "军事新闻";
+            // }
             function write($sql, $connect)
             {
                 $sth = mysqli_query($connect, $sql);

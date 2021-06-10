@@ -27,6 +27,9 @@ body .thingsbox .banner .banner-img li a img{
     width: 590px;
     height: 300px;
 }
+body .thingsbox .banner .banner-img li a .banner-title{
+
+}
 body .thingsbox .banner .banner-img li a p{
     position: absolute;
     display: block;
@@ -37,6 +40,10 @@ body .thingsbox .banner .banner-img li a p{
     text-align: center;
     background-color: rgb(191, 209, 205);
     top: 270px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
 }
 body .thingsbox .banner .banner-img li:first-child{
     display: inline;

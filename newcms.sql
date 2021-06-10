@@ -11,7 +11,7 @@
  Target Server Version : 50553
  File Encoding         : 65001
 
- Date: 09/06/2021 14:07:01
+ Date: 10/06/2021 11:27:36
 */
 
 SET NAMES utf8mb4;
@@ -30,6 +30,18 @@ CREATE TABLE `admin`  (
   `super` int(10) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for banner
+-- ----------------------------
+DROP TABLE IF EXISTS `banner`;
+CREATE TABLE `banner`  (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `pic` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for new_class
@@ -54,6 +66,6 @@ CREATE TABLE `news`  (
   `adduser` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '发布人',
   `hits` int(10) NOT NULL COMMENT '点击次数',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 34 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 35 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;

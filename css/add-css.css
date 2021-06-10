@@ -7,3 +7,6 @@
 .news-add form .news-class ul{
     list-style: none;
 }
+.news-add form .edit-box{
+    display: none;
+}

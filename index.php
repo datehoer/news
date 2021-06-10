@@ -60,29 +60,30 @@
     <div class="thingsbox">
         <div class="banner thingbox">
             <ul class='banner-img'>
-                <li>
-                    <a href=''>
-                        <img src="../news/images/a.jpg" alt="">
-                        <p>aaaaaa</p>
-                    </a>
-                </li>
-                <li>
-                    <a href=''>
-                        <img src="../news/images/b.jpg" alt="">
-                        <p>bbbbbb</p>
-                    </a>
-                </li>
+            <?php
+                $sqlbanner = 'select * from banner';
+                $sthbanner = mysqli_query($connect,$sqlbanner);
+                $resultbanner = mysqli_fetch_all($sthbanner,MYSQLI_ASSOC);
+                foreach($resultbanner as $keys => $banner){
+                    echo '<li><a href='.$banner['url'].'><img src="'.$banner["pic"].'"><p>'.$banner["title"].'</p></a></li>';
+                }
+            
+            ?>
             </ul>
             <div class="banner-radio">
                 <img src="../news/images/left.png" alt="" class="banner-radio-left">
                 <img src="../news/images/right.png" alt="" class="banner-radio-right">
             </div>
             <ul class="banner-under">
-                <li class='under-active'>
-                </li>
-                <li>
-
-                </li>
+                
+                <?php
+                    foreach($resultbanner as $keys => $banner){
+                        echo '<li></li>';
+                    }
+                ?>
+                <script>
+                    $('.banner-under>li:first-child').addClass('under-active');
+                </script>
             </ul>
         </div>
         <div class="newthing thingbox">
