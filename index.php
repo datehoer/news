@@ -102,60 +102,37 @@
                 ?>
             </div> 
         </div>
-        <div class="timething thingbox">
-            <h2>时事新闻</h2>
-            <div class="newsbox">
-                <div class="more"><a href="">更多&lt;&lt;&lt;</a></div>
-                <?php 
-                    foreach ($result as $key=>$news) {
-                            if($news['newclass']=='时事新闻'){echo "<a href='view.php?m=".$news['id']."'><span class='index-title'>";echo '标题:'.$news['title'].'</span></a><span class="index-time">'.$news['settime'].'</span><br/>';}
+        <?php 
+            $sqlclass = 'select * from new_class';
+            $sthclass = mysqli_query($connect,$sqlclass);
+            $sqlnews = 'select * from news';
+            $sthnews = mysqli_query($connect,$sqlnews);
+            $resultnews = mysqli_fetch_all($sthnews,MYSQLI_ASSOC);
+            $resultclass = mysqli_fetch_all($sthclass,MYSQLI_ASSOC);
+            foreach($resultclass as $key => $newclass){
+                echo "<div class='thingbox'><h2>".$newclass['newclass']."</h2><div class='newsbox'><div class='more'><a href=''>更多&lt;&lt;&lt;</a></div>";
+                foreach($resultnews as $word => $newnews){
+                    if($newnews['newclass']==$newclass['newclass']){
+                        echo "<a href='view.php?m=".$newnews['id']."'><span class='index-title'>";
+                        echo '标题:'.$newnews['title'].'</span></a><span class="index-time">'.$newnews['settime'].'</span><br/>';
                     }
-                ?>
-            </div>
-        </div>
-        <div class="moneything thingbox">
-            <h2>财经新闻</h2>
-            <div class="newsbox">
-            <div class="more"><a href="">更多&lt;&lt;&lt;</a></div>
-                <?php 
-                    foreach ($result as $key=>$news) {
-                            if($news['newclass']=='财经新闻'){echo "<a href='view.php?m=".$news['id']."'><span class='index-title'>";echo '标题:'.$news['title'].'</span></a><span class="index-time">'.$news['settime'].'</span><br/>';}
-                    }
-                ?>
-            </div>
-        </div>
-        <div class="sportthing thingbox">
-            <h2>体育新闻</h2>
-            <div class="newsbox">
-            <div class="more"><a href="">更多&lt;&lt;&lt;</a></div>
-                <?php 
-                    foreach ($result as $key=>$news) {
-                            if($news['newclass']=='体育新闻'){echo "<a href='view.php?m=".$news['id']."'><span class='index-title'>";echo '标题:'.$news['title'].'</span></a><span class="index-time">'.$news['settime'].'</span><br/>';}
-                    }
-                ?>
-            </div>
-        </div>
-        <div class="fightthing thingbox">
-            <h2>军事新闻</h2>
-            <div class="newsbox">
-            <div class="more"><a href="">更多&lt;&lt;&lt;</a></div>
-                <?php 
-                    foreach ($result as $key=>$news) {
-                            if($news['newclass']=='军事新闻'){echo "<a href='view.php?m=".$news['id']."'><span class='index-title'>";echo '标题:'.$news['title'].'</span></a><span class="index-time">'.$news['settime'].'</span><br/>';}
-                    }
-                ?>
-            </div>
-        </div>
+                }
+                echo "</div></div>";
+            }
+        ?>
     </div>
     <div class="footer">
         <div class='friend-link'>
             <h2>友情链接</h2>
             <ul>
-                <li><a href="">Datehoer'Blog</a></li>
-                <li><a href="">Datehoer'Blog</a></li>
-                <li><a href="">Datehoer'Blog</a></li>
-                <li><a href="">Datehoer'Blog</a></li>
-                <li><a href="">Datehoer'Blog</a></li>
+                <?php
+                    $sqlfriend = "select * from friendlink";
+                    $sthfriend = mysqli_query($connect,$sqlfriend);
+                    $resultfriend = mysqli_fetch_all($sthfriend,MYSQLI_ASSOC);
+                    foreach($resultfriend as $key => $friend){
+                        echo "<li><a href='".$friend['linkurl']."' target='_blank'>".$friend['linkname']."</a></li>";
+                    }
+                ?>
             </ul>
         </div>
         <div class="status-footer">

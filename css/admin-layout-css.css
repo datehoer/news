@@ -1,14 +1,35 @@
-.allbox .addbox{
-    width: 1200px;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-}
 .allbox .addbox .bannerbtn{
     width: 1000px;
     height: 80px;
     font-size: 32px;
+}
+.abox{
+    position: relative;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.allbox .addclass .classbtn{
+    width: 1000px;
+    height: 80px;
+    font-size: 32px;
+}
+.allbox .addfriend .friendbtn{
+    width: 1000px;
+    height: 80px;
+    font-size: 32px;
+}
+.allbox .addfriend i{
+    width: 50px;
+    height: 65px;
+    background-image: url(../../news/images/left.png);
+    display: block;
+    position: absolute;
+    transform:rotate(90deg);
+    top: 0px;
+    right: 150px;
 }
 .goback {
     position: absolute;
@@ -27,7 +48,11 @@
     top: 0;
     right: 150px;
 }
-.rotatei {
+.class-rotatei {
+    transform:rotate(270deg)!important;
+    top: 10px!important;
+}
+.friend-rotatei {
     transform:rotate(270deg)!important;
     top: 10px!important;
 }
