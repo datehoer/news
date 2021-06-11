@@ -6,12 +6,19 @@
     <title>China-news-admin</title>
     <link rel="stylesheet" href="../news/css/index.css">
     <script src="../news/js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="../news/css/admin-layout-css.css">
 </head>
 <body>
+    <div class="goback">
+        
+        <a href="admin_index.php"><input type="button" value="返回上一页"></a>
+    </div>
     <div class="allbox">
         <div class="addbox">
-            <div class='bannerbox'>
-                <input type="button" value="轮播图设置">
+            <i></i>
+            <input type="button" value="轮播图设置" class="bannerbtn">
+            
+            <div class='bannerbox'>  
                 <div>
                     <h4>添加轮播图</h4>
                     <form action="" method="POST">
@@ -60,5 +67,7 @@
             header("Location:admin_news_layout.php");
         }
     ?>
+    <script src="../news/js/layout-js.js"></script>
+
 </body>
 </html>

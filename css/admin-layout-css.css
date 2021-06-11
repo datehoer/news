@@ -1,0 +1,33 @@
+.allbox .addbox{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.allbox .addbox .bannerbtn{
+    width: 1000px;
+    height: 80px;
+    font-size: 32px;
+}
+.goback {
+    position: absolute;
+}
+.goback input{
+    cursor: pointer;
+
+}
+.allbox .addbox i{
+    width: 50px;
+    height: 65px;
+    background-image: url(../../news/images/left.png);
+    display: block;
+    position: absolute;
+    transform:rotate(90deg);
+    top: 0;
+    right: 150px;
+}
+.rotatei {
+    transform:rotate(270deg)!important;
+    top: 10px!important;
+}
