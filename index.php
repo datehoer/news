@@ -52,8 +52,16 @@
             <li><a href="login.php">后台管理</a></li>
         </ul>
         <div class='search-box'>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="请输入要搜索的新闻"><input type="submit" value="搜索">
+                <form action="search.php" method="Get">
+                    <input type="text" name="search" id="" placeholder="请输入要搜索的新闻">
+                    <select name="searchclass" id="">
+                        <option value="">请选择搜索的分类</option>
+                        <option value="newclass">类型</option>
+                        <option value="title">标题</option>
+                        <option value="adduser">作者</option>
+                        <option value="content">内容</option>
+                    </select>
+                    <input type="submit" value="搜索" name="searchup">
                 </form>
         </div>
     </nav>

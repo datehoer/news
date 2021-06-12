@@ -7,6 +7,7 @@ body nav .search-box{
     height: 20px;
     top: 60px;
     right: 160px;
+    z-index: 9999;
 }
 body .thingsbox{
     margin-top: 20px;
