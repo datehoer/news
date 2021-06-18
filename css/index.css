@@ -38,6 +38,8 @@ body{
     background-color: #E6EAE4;
 }
 body .status{
+    position: relative; 
+    z-index: 9999;
     background-color: rgba(190, 240, 240,0.50);
     margin-bottom: 20px;
 }
@@ -47,6 +49,7 @@ body .status .nav-status{
     margin-left: 888px;
 }
 body .status .nav-status li{
+    z-index: 9999;
     float: left;
     width: 122px;
     height: 30px;

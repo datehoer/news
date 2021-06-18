@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../news/css/index.css">
     <link rel="stylesheet" href="../news/css/index-css.css">
+    <link rel="stylesheet" href="../news/css/search-css.css">
 </head>
 <body>
 
@@ -45,7 +46,7 @@
         </ul>
         <div class='search-box'>
                 <form action="search.php" method="Get">
-                    <input type="text" name="search" id="" placeholder="请输入要搜索的新闻">
+                    <input type="text" name="search" id="search" placeholder="请输入要搜索的新闻">
                     <select name="searchclass" id="">
                         <option value="">请选择搜索的分类</option>
                         <option value="newclass">类型</option>
@@ -57,25 +58,39 @@
                 </form>
         </div>
     </nav>
-    <?php
-        include('config.php');
-        $titleword = $_GET['search'];
-        $searchclass = $_GET['searchclass'];
-        if($titleword =='' ||$searchclass ==''){
-            echo "搜索词/类不能为空";
-        }
-        else{
-            $sql = "select * from news where $searchclass like '%$titleword%'";
-            $sth = mysqli_query($connect,$sql);
-            $result = mysqli_fetch_all($sth,MYSQLI_ASSOC);
-            echo "您搜索的是".$titleword."<br>";
-            echo "搜索到的结果为:".count($result)."<br>";
-            foreach($result as $key => $news){
-                echo "标题:<a href='view.php?m=".$news['id']."'>".$news['title']."</a><br>";
+    <div class='searchbox'>
+        <?php
+            include('config.php');
+            $titleword = $_GET['search'];
+            $searchclass = $_GET['searchclass'];
+            if($titleword =='' ||$searchclass ==''){
+                echo "搜索词/类不能为空";
             }
-    
-        }
+            else{
+                $sql = "select * from news where $searchclass like '%$titleword%'";
+                $sth = mysqli_query($connect,$sql);
+                $result = mysqli_fetch_all($sth,MYSQLI_ASSOC);
+                if($searchclass == 'newclass'){
+                    $searchclass = '类型';
+                }
+                elseif($searchclass == 'title'){
+                    $searchclass = '标题';
+                }
+                elseif($searchclass == 'adduser'){
+                    $searchclass = '作者';
+                }
+                elseif($searchclass == 'content'){
+                    $searchclass = '内容';
+                }
+                echo "<p class='searchname'>您搜索的".$searchclass."是<i>".$titleword."</i></p><br>";
+                echo "搜索到包含 ".$titleword." 内容的数量为:".count($result)."<br><br>";
+                foreach($result as $key => $news){
+                    echo "<p class='searchcontent'>标题:<a href='view.php?m=".$news['id']."'>".$news['title']."</a></p><br>";
+                }
         
-    ?>
+            }
+            
+        ?>
+    </div>
 </body>
 </html>

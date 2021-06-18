@@ -53,7 +53,7 @@
         </ul>
         <div class='search-box'>
                 <form action="search.php" method="Get">
-                    <input type="text" name="search" id="" placeholder="请输入要搜索的新闻">
+                    <input type="text" name="search" id="search" placeholder="请输入要搜索的新闻">
                     <select name="searchclass" id="">
                         <option value="">请选择搜索的分类</option>
                         <option value="newclass">类型</option>
