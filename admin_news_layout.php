@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../news/css/admin-layout-css.css">
 </head>
 <body>
+    
     <div class="goback">
         
         <a href="admin_index.php"><input type="button" value="返回上一页"></a>
