@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<heamd>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		section {
+			width: 300px;
+			height: 300px;
+			margin: 200px auto;
+			perspective: 3000px;
+			
+		}
+		@keyframes xz {
+			from{
+				transform: rotateX(0deg) rotateY(0deg);
+			}
+			to {
+				transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+		section:hover .abox{
+			
+		}
+		.abox {
+			width: 300px;
+			height: 300px;
+			perspective: 20000px;
+			position: relative;
+			transform-style: preserve-3d;
+			transition: all 20s ease 0s;
+			animation: xz 5s linear alternate infinite;
+		}
+		.abox p{
+			width: 300px;
+			height: 300px;
+			position: absolute;
+		}
+		.abox p:nth-child(1){
+			transform: translateZ(150px);
+			background-color: seagreen;
+		}
+		.abox p:nth-child(2){
+			transform: rotateX(90deg) translateZ(150px);
+			background-color: #DEB887;
+		}
+		.abox p:nth-child(3){
+			transform: rotateX(90deg) translateZ(-150px);
+			background-color: fuchsia;
+		}
+		.abox p:nth-child(4){
+			transform: rotateY(90deg) translateZ(150px);
+			background-color: gold;
+		}
+		.abox p:nth-child(5){
+			transform: rotateY(90deg) translateZ(-150px);
+			background-color: brown;
+		}
+		.abox p:nth-child(6){
+			transform: translateZ(-150px);
+			background-color: turquoise;
+		}
+		em {
+			width: 50px;
+			height: 50px;
+			display: block;
+			position: relative;
+		}
+		em i {
+			width: 30px;
+			height: 30px;
+			background-color: orangered;
+			display: block;
+			transform: rotate(45deg);
+
+		}
+		em b {
+			width: 30px;
+			height: 30px;
+			background-color: white;
+			display: block;
+			transform: rotate(45deg);
+			position: absolute;
+			top: -8px;
+		}
+	</style>
+	<body>
+		<section>
+			<div class="abox">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</section>
+
+		<em>
+			<i></i>
+			<b></b>
+		</em>
+	</body>
+</html>

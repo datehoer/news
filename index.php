@@ -44,11 +44,11 @@
     </div>
     <nav>
         <ul>
-            <li><a href="">首页</a></li>
-            <li><a href="">时事新闻</a></li>
-            <li><a href="">财经新闻</a></li>
-            <li><a href="">体育新闻</a></li>
-            <li><a href="">军事新闻</a></li>
+            <li><a href="index.php">首页</a></li>
+            <li><a href="index_list.php?class=ss">时事新闻</a></li>
+            <li><a href="index_list.php?class=cj">财经新闻</a></li>
+            <li><a href="index_list.php?class=ty">体育新闻</a></li>
+            <li><a href="index_list.php?class=js">军事新闻</a></li>
             <li><a href="login.php">后台管理</a></li>
         </ul>
         <div class='search-box'>

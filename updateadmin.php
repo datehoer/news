@@ -1,5 +1,9 @@
 <?php
-    
+    $update_id = $_GET["id"];
+    include("config.php");
+    $sql = "select * from admin where id = '$update_id'";
+    $sth = mysqli_query($connect,$sql);
+    $result = mysqli_fetch_all($sth,MYSQLI_ASSOC);
 ?>
 <!-- 后台注册页面 -->
 <!DOCTYPE html>
@@ -15,14 +19,14 @@
 <body>
 
     <div class='register'>
-        <h2>用户注册</h2>
+        <h2>用户信息修改</h2>
         <form action="" method="post" class='register-form'>
-            <span>用户名:</span><input type="text" name="userName" id="userName" class='inputtext'><br>
-            <span>密码:</span><input type="text" name="pwd" id="pwd" class='inputtext'><br>
-            <span>邮箱:</span><input type="email" class='inputtext' name="email"><br>
+            <span>用户名:</span><input type="text" name="userName" id="userName" class='inputtext' value='<?php echo $result[0]["username"]?>'><br>
+            <span>密码:</span><input type="text" name="pwd" id="pwd" class='inputtext' value='<?php echo $result[0]["userpwd"]?>'><br>
+            <span>邮箱:</span><input type="email" class='inputtext' name="email" value='<?php echo $result[0]["email"]?>'><br>
             <!-- 邮箱验证码:<input type="text" ><br> -->
             <br>
-            <input type="submit" value="注册" class="register-btn" name='submit'></a>
+            <input type="submit" value="修改" class="register-btn" name='submit'></a>
         </form>
     </div>
 
@@ -38,14 +42,11 @@
             if($username ==null||$pwd==null||$email==null){
                 echo '<script>alert("用户名/密码/邮箱不能为空")</script>';
             }
-            else if($result != null){
-                echo '<script>alert("用户名已存在")</script>';
-            }
             else{
-                $sqlt ="insert into admin(`username`,`userpwd`,`admin`,`email`) values('$username','$pwd',0,'$email');";
+                $sqlt ="update admin set username='$username',userpwd='$pwd',email='$email' where id ='$update_id'";
                 $stht = mysqli_query($connect,$sqlt);
                 mysqli_close($connect);
-                header("Location: login.php");
+                header("Location: admin_admin.php");
             }
         }
     ?>
